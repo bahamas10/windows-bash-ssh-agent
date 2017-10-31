@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#
+# Very opinionated install script for persistent bash on ubuntu on windows
+# ssh-agent
+# http://daveeddy.com/2017/10/18/persistent-sshagent-on-bash-on-ubuntu-on-windows/
+# Author: Dave Eddy <dave@daveeddy.com>
+# Date: October 30, 2017
+# License: MIT
+
+user=${1:-$USER}
+winhome=/mnt/c/Users/$user
+scriptsdir=~/userprofile/Documents/scripts
+
+if [[ ! -d "$winhome" ]]; then
+	echo "error: $winhome not a directory" >&2
+	echo " - Windows user '$user' not found"
+	echo " - Try passing the Windows user as the first argument"
+	exit 1
+fi
+
+mkdir -pv ~/bin
+ln -svf "$winhome" ~/userprofile
+mkdir -pv "$scriptsdir"
+
+ln -svf "$PWD/start-hidden.vbs" "$scriptsdir/"
+ln -svf "$PWD/start-ssh-agent.bat" "$scriptsdir/"
+ln -svf "$PWD/start-ssh-agent" ~/bin
