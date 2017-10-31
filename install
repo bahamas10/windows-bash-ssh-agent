@@ -22,6 +22,6 @@ mkdir -pv ~/bin
 ln -svf "$winhome" ~/userprofile
 mkdir -pv "$scriptsdir"
 
-ln -svf "$PWD/start-hidden.vbs" "$scriptsdir/"
-ln -svf "$PWD/start-ssh-agent.bat" "$scriptsdir/"
-ln -svf "$PWD/start-ssh-agent" ~/bin
+cp -vf "$PWD/start-hidden.vbs" "$scriptsdir/"
+cp -vf "$PWD/start-ssh-agent.bat" "$scriptsdir/"
+cp -vf "$PWD/start-ssh-agent" ~/bin
