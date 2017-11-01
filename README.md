@@ -11,8 +11,7 @@ Read the blog post here
 http://daveeddy.com/2017/10/18/persistent-sshagent-on-bash-on-ubuntu-on-windows/
 
 The above blog post illustrates all of the steps required to make this work.
-You can run the included `install` script to put the script files into place
-(as symlinks).
+You can run the included `install` script to put the script files into place.
 
 
 ```
