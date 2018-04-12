@@ -24,4 +24,4 @@ mkdir -pv "$scriptsdir"
 
 cp -vf "$PWD/start-hidden.vbs" "$scriptsdir/"
 cp -vf "$PWD/start-ssh-agent.bat" "$scriptsdir/"
-cp -vf "$PWD/start-ssh-agent" ~/bin
+cp -vf "$PWD/../start-ssh-agent" ~/bin
